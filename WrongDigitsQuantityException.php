@@ -1,4 +1,6 @@
 <?php 
 namespace Numeritos;
 
-class WrongDigitsQuantityException extends \Exception{}
+class WrongDigitsQuantityException extends \Exception
+{
+}

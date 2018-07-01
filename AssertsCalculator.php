@@ -3,9 +3,7 @@ namespace Numeritos;
 
 interface AssertsCalculator
 {
+    public function getAssertions(): int;
 
-	public function getAssertions(): int;
-
-	public function calculateAssertions(Array $target, Array $subject): void;
-
+    public function calculateAssertions(array $target, array $subject): void;
 }

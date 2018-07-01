@@ -1,0 +1,17 @@
+    {
+    "name": "nan-apps/numeritos",
+    "description": "Game where you have to guess a number",
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "gaston",
+            "email": "gaston@nan-apps.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Numeritos\\": ""}
+    }
+}

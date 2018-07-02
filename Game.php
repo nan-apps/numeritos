@@ -21,8 +21,7 @@ class Game
 
     public function getAssertions(AssertsCalculator $aCalc): int
     {
-        $aCalc->calculateAssertions($this->getTheNumberAsArray(), $this->getGuessNumberAsArray());
-        return $aCalc->getAssertions();
+        return $aCalc->calculateAssertions($this->getTheNumberAsArray(), $this->getGuessNumberAsArray());
     }
 
     private function getTheNumberAsArray(): array

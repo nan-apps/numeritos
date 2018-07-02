@@ -7,10 +7,15 @@ class AssertsBadCalculator implements AssertsCalculator
     {
         $assertions = 0;
         for ($i=0; $i < count($target); $i++) {
-            if (!in_array($subject[$i], $target)) {
+            if ($this->assertsTrue($subject[$i], $target)) {
                 $assertions++;
             }
         }
         return $assertions;
+    }
+
+    private function assertsTrue($needle, $haystack)
+    {
+        return !in_array($needle, $haystack);
     }
 }

@@ -7,10 +7,15 @@ class AssertsRegularCalculator implements AssertsCalculator
     {
         $assertions = 0;
         for ($i=0; $i < count($target); $i++) {
-            if ($target[$i] !== $subject[$i] && in_array($subject[$i], $target)) {
+            if ($this->assertsTrue($target[$i], $subject[$i], $target)) {
                 $assertions++;
             }
         }
         return $assertions;
+    }
+
+    private function assertsTrue($targetElement, $subjectElement, $targetArray)
+    {
+        return $targetElement !== $subjectElement && in_array($subjectElement, $targetArray);
     }
 }

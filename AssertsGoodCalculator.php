@@ -7,10 +7,15 @@ class AssertsGoodCalculator implements AssertsCalculator
     {
         $assertions = 0;
         for ($i=0; $i < count($target); $i++) {
-            if ($target[$i] === $subject[$i]) {
+            if ($this->assertsTrue($target[$i], $subject[$i])) {
                 $assertions++;
             }
         }
         return $assertions;
+    }
+
+    private function assertsTrue($targetElement, $subjectElement)
+    {
+        return $targetElement === $subjectElement;
     }
 }
